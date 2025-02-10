@@ -8,6 +8,7 @@ def extract_version(filename):
     if match is not None:
         return match.group(1)
 
+
 setup(
     name="bigsuds",
     version=extract_version('bigsuds.py'),
@@ -23,12 +24,13 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.12',
     ],
     keywords='f5 icontrol',
     author='F5 Networks, Inc.',
     author_email='devcentral@f5.com',
     url='http://devcentral.f5.com',
-    install_requires=['suds-jurko>=0.6'],
+    install_requires=['suds-community>=1.1.2'],
     py_modules=['bigsuds'],
     test_suite='nose.collector',
     tests_require=['nose', 'mock', 'mox'],

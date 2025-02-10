@@ -3,6 +3,7 @@ python:
   - 2.7
   - 3.5
   - 3.6
+  - 3.12
 sudo: true
 services:
   - docker
@@ -15,5 +16,5 @@ deploy:
     on:
       all_branches: true
       tags: true
-      python: 2.7
+      python: 3.12
     skip_cleanup: true
